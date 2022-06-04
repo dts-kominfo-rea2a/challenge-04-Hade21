@@ -10,7 +10,7 @@ const mockDates = ["2022-01-01 UTC+7", "2021-12-31 00:00:00 UTC+2"];
 
 // TODO: Buatlah fungsi createDate
 const createDate = (date, i) => {
-  if (i === undefined) {
+  if (typeof i !== "number") {
     const res = [];
     for (let j = 0; j < date.length; j++) {
       res.push(Date.parse(date[j]) / 1000);
