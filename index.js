@@ -6,10 +6,11 @@ const dates = [
   "2021-04-05 00:00:00 UTC+2", // 1617573600 (epoch time, dalam detik)
   "2020-02-03 UTC+7", // 1580662800 (epoch time, dalam detik)
 ];
+const mockDates = ["2022-01-01 UTC+7", "2021-12-31 00:00:00 UTC+2"];
 
 // TODO: Buatlah fungsi createDate
 const createDate = (date, i) => {
-  if (!i) {
+  if (i === undefined) {
     const res = [];
     for (let j = 0; j < date.length; j++) {
       res.push(Date.parse(date[j]) / 1000);
@@ -24,18 +25,20 @@ const createDate = (date, i) => {
   }
 };
 
+console.log(createDate(mockDates));
+
 // ! JANGAN DIMODIFIKASI
-(() => {
-  // IIFE
+// (() => {
+//   // IIFE
 
-  // '1546387200-1580662800-1614841200-1617573600-1651802400' (dalam string)
-  console.log(createDate?.(dates));
+//   // '1546387200-1580662800-1614841200-1617573600-1651802400' (dalam string)
+//   console.log(createDate?.(dates));
 
-  // '1614841200' (dalam string)
-  console.log(createDate?.(dates, 2));
-})();
+//   // '1614841200' (dalam string)
+//   console.log(createDate?.(dates, 2));
+// })();
 
-module.exports = {
-  dates,
-  createDate,
-};
+// module.exports = {
+//   dates,
+//   createDate,
+// };
