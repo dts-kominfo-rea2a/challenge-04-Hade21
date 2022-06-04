@@ -25,20 +25,18 @@ const createDate = (date, i) => {
   }
 };
 
-console.log(createDate(mockDates));
-
 // ! JANGAN DIMODIFIKASI
-// (() => {
-//   // IIFE
+(() => {
+  // IIFE
 
-//   // '1546387200-1580662800-1614841200-1617573600-1651802400' (dalam string)
-//   console.log(createDate?.(dates));
+  // '1546387200-1580662800-1614841200-1617573600-1651802400' (dalam string)
+  console.log(createDate?.(dates));
 
-//   // '1614841200' (dalam string)
-//   console.log(createDate?.(dates, 2));
-// })();
+  // '1614841200' (dalam string)
+  console.log(createDate?.(dates, 2));
+})();
 
-// module.exports = {
-//   dates,
-//   createDate,
-// };
+module.exports = {
+  dates,
+  createDate,
+};
