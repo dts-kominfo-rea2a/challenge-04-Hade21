@@ -10,11 +10,17 @@ const dates = [
 // TODO: Buatlah fungsi createDate
 const createDate = (date, i) => {
   if (!i) {
+    const res = [];
     for (let j = 0; j < date.length; j++) {
-      return Date.parse(date[j]) / 1000;
+      res.push(Date.parse(date[j]) / 1000);
     }
+    return res
+      .sort((a, b) => {
+        return a - b;
+      })
+      .join("-");
   } else {
-    return Date.parse(date[i]) / 1000;
+    return (Date.parse(date[i]) / 1000).toString();
   }
 };
 
